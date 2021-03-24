@@ -1,14 +1,6 @@
-# Webpack Starter
+# Todo-List
 
-Este es el proyecto inicial para crear aplicaciones utilizando webpack.
+This project is a Todo-List app. The JavaScript logic is part of the learning on the course "JavaScript Moderno" by Fernando Herrera.
 
-### Notas:
-Recuerden reconstruir los módulos de Node
-```
-npm install
-```
-
-Y para construir el build, recuerden:
-```
-npm run build
-```
+### Notes:
+The HTML and CSS templates belong to todomvc.com
