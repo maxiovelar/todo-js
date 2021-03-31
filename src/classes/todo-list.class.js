@@ -5,34 +5,34 @@ export class TodoList {
     constructor() {
 
         // this.todos = [];
-        this.cargarLocalStorage();
+        this.uploadLocalStorage();
 
     }
 
     
-    nuevoTodo(todo) {
+    newTodo(todo) {
         this.todos.push(todo);
-        this.guardarLocalStorage();
+        this.saveLocalStorage();
     }
 
     
-    eliminarTodo(id) {
+    eliminateTodo(id) {
 
         this.todos = this.todos.filter(todo => todo.id != id)
-        this.guardarLocalStorage();
+        this.saveLocalStorage();
 
     }
 
     
-    marcarCompletado(id) {
+    markCompleted(id) {
 
         for(const todo of this.todos) {
 
             console.log(id, todo.id);
             if (todo.id == id) {
     
-                todo.completado = !todo.completado;
-                this.guardarLocalStorage();
+                todo.completed = !todo.completed;
+                this.saveLocalStorage();
                 break;
             }
 
@@ -41,22 +41,22 @@ export class TodoList {
     }
 
     
-    eliminarCompletados() {
+    eliminateCompleted() {
 
-        this.todos = this.todos.filter(todo => !todo.completado);
-        this.guardarLocalStorage();
+        this.todos = this.todos.filter(todo => !todo.completed);
+        this.saveLocalStorage();
 
     }
 
 
-    guardarLocalStorage(){
+    saveLocalStorage(){
 
         localStorage.setItem('todo', JSON.stringify(this.todos));
 
     }
 
 
-    cargarLocalStorage(){
+    uploadLocalStorage(){
 
         // if (localStorage.getItem('todo')) {
 
